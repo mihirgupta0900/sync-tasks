@@ -1,0 +1,28 @@
+{
+  "name": "@acme/trpc",
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "type-check": "tsc --noEmit",
+    "build": "tsup index.ts --format cjs --dts",
+    "dev": "pnpm run build --watch"
+  },
+  "dependencies": {
+    "@acme/db": "^0.1.0",
+    "@trpc/server": "^10.27.1",
+    "superjson": "1.9.1",
+    "tsup": "^6.7.0",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@acme/eslint-config": "^0.1.0",
+    "eslint": "^8.40.0",
+    "tsconfig": "workspace:*",
+    "typescript": "^5.0.4"
+  }
+}
