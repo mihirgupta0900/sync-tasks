@@ -156,12 +156,18 @@ importers:
       eslint:
         specifier: ^8.40.0
         version: 8.40.0
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../../packages/config/eslint-config-custom
       postcss:
         specifier: ^8.4.23
         version: 8.4.23
       tailwindcss:
         specifier: ^3.3.2
         version: 3.3.2
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../packages/config/tsconfig
       typescript:
         specifier: ^5.0.4
         version: 5.0.4
@@ -196,6 +202,21 @@ importers:
       typescript:
         specifier: ^5.0.4
         version: 5.0.4
+
+  packages/config/eslint-config-custom:
+    dependencies:
+      eslint-config-next:
+        specifier: ^13.4.1
+        version: 13.4.2(eslint@8.40.0)(typescript@5.0.4)
+      eslint-config-prettier:
+        specifier: ^8.3.0
+        version: 8.8.0(eslint@8.40.0)
+      eslint-config-turbo:
+        specifier: ^1.9.3
+        version: 1.9.8(eslint@8.40.0)
+      eslint-plugin-react:
+        specifier: 7.28.0
+        version: 7.28.0(eslint@8.40.0)
 
   packages/config/eslint-config-custom-server:
     dependencies:
@@ -2405,6 +2426,29 @@ packages:
       eslint: 8.40.0
     dev: false
 
+  /eslint-plugin-react@7.28.0(eslint@8.40.0):
+    resolution: {integrity: sha512-IOlFIRHzWfEQQKcAD4iyYDndHwTQiCMcJVJjxempf203jnNLUnW34AXLrV33+nEXoifJE2ZEGmcjKPL8957eSw==}
+    engines: {node: '>=4'}
+    peerDependencies:
+      eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
+    dependencies:
+      array-includes: 3.1.6
+      array.prototype.flatmap: 1.3.1
+      doctrine: 2.1.0
+      eslint: 8.40.0
+      estraverse: 5.3.0
+      jsx-ast-utils: 3.3.3
+      minimatch: 3.1.2
+      object.entries: 1.1.6
+      object.fromentries: 2.0.6
+      object.hasown: 1.1.2
+      object.values: 1.1.6
+      prop-types: 15.8.1
+      resolve: 2.0.0-next.4
+      semver: 6.3.0
+      string.prototype.matchall: 4.0.8
+    dev: false
+
   /eslint-plugin-react@7.32.2(eslint@8.40.0):
     resolution: {integrity: sha512-t2fBMa+XzonrrNkyVirzKlvn5RXzzPwRHtMvLAtVZrt8oxgnTQaYbU6SXTOO1mwQgp1y5+toMSKInnzGr0Knqg==}
     engines: {node: '>=4'}
@@ -3396,6 +3440,7 @@ packages:
 
   /json5@1.0.2:
     resolution: {integrity: sha512-g1MWMLBiz8FKi1e4w0UyVL3w+iJceWAFBAaBnnGKOpNa5f8TLktkbre1+s6oICydWAm+HRUGTmI+//xv2hvXYA==}
+    hasBin: true
     dependencies:
       minimist: 1.2.8
     dev: false
@@ -4363,6 +4408,7 @@ packages:
 
   /resolve@2.0.0-next.4:
     resolution: {integrity: sha512-iMDbmAWtfU+MHpxt/I5iWI7cY6YVEZUQ3MBgPQ++XD1PELuJHIl82xBmObyP2KyQmkNB2dsqF7seoQQiAn5yDQ==}
+    hasBin: true
     dependencies:
       is-core-module: 2.12.0
       path-parse: 1.0.7
@@ -4435,6 +4481,7 @@ packages:
 
   /semver@6.3.0:
     resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
+    hasBin: true
     dev: false
 
   /semver@7.5.0:
