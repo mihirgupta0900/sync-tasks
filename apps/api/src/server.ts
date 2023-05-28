@@ -6,6 +6,8 @@ import morgan from "morgan";
 
 import { appRouter } from "@acme/trpc";
 
+import { githubRouter } from "./routes/github.routes";
+
 export const createServer = () => {
   const app = express();
   app
@@ -20,6 +22,7 @@ export const createServer = () => {
         router: appRouter,
       }),
     )
+    .use("/github", githubRouter)
     .get("/message/:name", (req, res) => {
       return res.json({ message: `hello ${req.params.name}` });
     })
