@@ -541,6 +541,10 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
+  if (req.method !== "POST") {
+    return res.status(405).send("Method not allowed");
+  }
+
   const payload = JSON.parse(req.body?.payload);
   console.log("ACTION: ", payload?.action);
   if (payload?.action !== "review_requested") {
