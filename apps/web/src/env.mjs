@@ -14,13 +14,17 @@ export const env = createEnv({
    * For them to be exposed to the client, prefix them with `NEXT_PUBLIC_`.
    */
   client: {
-    // NEXT_PUBLIC_CLIENTVAR: z.string(),
+    TODOIST_TOKEN: z.string().length(40),
+    TODOIST_PROJECT: z.string().min(1),
+    GITHUB_TARGET_REVIEWER: z.string().min(1),
   },
   /**
    * Destructure all variables from `process.env` to make sure they aren't tree-shaken away.
    */
   runtimeEnv: {
-    DATABASE_URL: process.env.DATABASE_URL,
+    TODOIST_PROJECT: process.env.TODOIST_PROJECT,
+    TODOIST_TOKEN: process.env.TODOIST_TOKEN,
+    GITHUB_TARGET_REVIEWER: process.env.GITHUB_TARGET_REVIEWER,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   skipValidation: !!process.env.CI || !!process.env.SKIP_ENV_VALIDATION,

@@ -13,7 +13,6 @@
     "dev": "pnpm run build --watch"
   },
   "dependencies": {
-    "@acme/db": "^0.1.0",
     "@trpc/server": "^10.27.1",
     "superjson": "1.9.1",
     "tsup": "^6.7.0",
