@@ -1,9 +1,10 @@
-import { appRouter } from "@sync-tasks/trpc";
 import * as trpcExpress from "@trpc/server/adapters/express";
 import { json, urlencoded } from "body-parser";
 import cors from "cors";
 import express from "express";
 import morgan from "morgan";
+
+import { appRouter, createContext } from "@sync-tasks/trpc";
 
 import { githubRouter } from "./routes/github.routes";
 
@@ -19,6 +20,7 @@ export const createServer = () => {
       "/trpc",
       trpcExpress.createExpressMiddleware({
         router: appRouter,
+        createContext,
       }),
     )
     .use("/github", githubRouter)
