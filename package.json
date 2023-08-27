@@ -7,10 +7,10 @@
   "packageManager": "pnpm@8.5.1",
   "scripts": {
     "build": "turbo build",
+    "build:api": "turbo build --filter=@sync-tasks/api...",
+    "start:api": "turbo start --filter=@sync-tasks/api",
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo clean",
-    "db:generate": "turbo db:generate",
-    "db:push": "turbo db:push db:generate",
     "dev": "turbo dev --parallel",
     "format": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,json}\" --ignore-path .gitignore",
     "lint": "turbo lint && manypkg check",
