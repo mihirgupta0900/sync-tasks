@@ -10,7 +10,7 @@
     "start": "node dist/index.js"
   },
   "dependencies": {
-    "@acme/trpc": "workspace:*",
+    "@sync-tasks/trpc": "workspace:*",
     "@doist/todoist-api-typescript": "^2.1.2",
     "@t3-oss/env-core": "^0.3.1",
     "@trpc/server": "^10.27.1",

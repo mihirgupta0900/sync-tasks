@@ -1,10 +1,9 @@
+import { appRouter } from "@sync-tasks/trpc";
 import * as trpcExpress from "@trpc/server/adapters/express";
 import { json, urlencoded } from "body-parser";
 import cors from "cors";
 import express from "express";
 import morgan from "morgan";
-
-import { appRouter } from "@acme/trpc";
 
 import { githubRouter } from "./routes/github.routes";
 

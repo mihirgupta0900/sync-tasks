@@ -1,8 +1,7 @@
+import type { AppRouter } from "@sync-tasks/trpc";
 import { httpBatchLink, loggerLink } from "@trpc/client";
 import { createTRPCNext } from "@trpc/next";
 import superjson from "superjson";
-
-import type { AppRouter } from "@acme/trpc";
 
 const getBaseUrl = () => {
   // express server URL
@@ -31,4 +30,4 @@ export const api = createTRPCNext<AppRouter>({
   ssr: false,
 });
 
-// export { type RouterInputs, type RouterOutputs } from "@acme/api";
+// export { type RouterInputs, type RouterOutputs } from "@sync-tasks/api";

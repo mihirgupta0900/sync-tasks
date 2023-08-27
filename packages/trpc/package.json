@@ -1,5 +1,5 @@
 {
-  "name": "@acme/trpc",
+  "name": "@sync-tasks/trpc",
   "version": "0.1.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -19,7 +19,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@acme/eslint-config": "^0.1.0",
+    "@sync-tasks/eslint-config": "^0.1.0",
     "eslint": "^8.40.0",
     "tsconfig": "workspace:*",
     "typescript": "^5.0.4"
